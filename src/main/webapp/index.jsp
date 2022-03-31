@@ -1,15 +1,26 @@
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%--
+  Created by IntelliJ IDEA.
+  User: izzybella01
+  Date: 3/30/22
+  Time: 11:03 AM
+  To change this template use File | Settings | File Templates.
+--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%! int counter = 0; %>
+<% counter += 1; %>
 <html>
 <head>
-    <title><%= "some title" %></title>
+    <title>Title</title>
 </head>
 <body>
-    <c:if test="true">
-        <h1>Variable names should be very descriptive</h1>
-    </c:if>
-    <c:if test="false">
-        <h1>single letter variable names are good</h1>
-    </c:if>
+
+<h1>The current count is <%= counter %>.</h1>
+
+View the page source!
+
+<%-- this is a JSP comment, you will *not* see this in the html --%>
+
+<!-- this is an HTML comment, you *will* see this in the html -->
+
 </body>
 </html>
