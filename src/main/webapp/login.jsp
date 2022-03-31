@@ -13,6 +13,7 @@
         <title>Login</title>
     </head>
     <body>
+    <%@include file="partials/navbar.jsp"%>
         <form method="POST" action="${pageContext.request.contextPath}/login.jsp">
             <label for="username">Username</label>
             <input id="username" name="username" type="text">
