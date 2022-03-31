@@ -8,6 +8,8 @@ import java.io.IOException;
 public class CounterServlet extends HttpServlet {
     public int counter = 0;
 
+
+
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
 
