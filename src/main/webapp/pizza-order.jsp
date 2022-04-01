@@ -11,7 +11,7 @@
     <title>Pizza Order</title>
 </head>
 <body>
-
+<h1>Pizza Form</h1>
     <form method="POST" action="/pizza-order">
         <label for="size">Choose a size: </label>
         <select name="size" id="size">
