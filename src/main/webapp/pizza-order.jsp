@@ -40,17 +40,18 @@
         <br>
 
         <label for="sauce">Choose toppings: </label>
-        <input type="checkbox" id="topping" name="choice" value="Pepperoni">
+        <br>
+        <input type="checkbox" id="topping" name="choice" value="pepperoni">
         <label for="topping">Pepperoni</label><br>
-        <input type="checkbox" id="topping2" name="choice" value="Bacon">
+        <input type="checkbox" id="topping2" name="choice" value="bacon">
         <label for="topping2">Bacon</label><br>
-        <input type="checkbox" id="topping3" name="choice" value="Ham">
+        <input type="checkbox" id="topping3" name="choice" value="ham">
         <label for="topping3">Ham</label>
         <br>
 
         <label for="delivery">Delivery Address:</label>
         <input type="text" id="delivery" name="delivery"><br>
-        <button type="submit">Place Order</button>
+        <button>Place Order</button>
     </form>
 
 </body>
