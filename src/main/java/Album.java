@@ -2,14 +2,14 @@ import java.io.Serializable;
 import java.util.Date;
 
 public class Album implements Serializable {
-    public Album() {}
-
     private int id;
     private String artist;
     private String name;
     private String releaseDate;
     private double sales;
     private String genre;
+
+    public Album() {}
 
     public int getId() {
         return id;

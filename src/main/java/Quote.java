@@ -1,12 +1,12 @@
 import java.io.Serializable;
 
 public class Quote implements Serializable {
-    public Quote() {}
-
     private int id;
     private String content;
     private int authorId;
     private String author;
+
+    public Quote() {}
 
     public int getId() {
         return id;
