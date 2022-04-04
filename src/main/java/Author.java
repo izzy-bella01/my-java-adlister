@@ -1,11 +1,11 @@
 import java.io.Serializable;
 
-public class Authors implements Serializable {
-    public Authors() {}
-
+public class Author implements Serializable {
     private int id;
     private String firstName;
     private String lastName;
+
+    public Author() {}
 
     public int getId() {
         return id;
