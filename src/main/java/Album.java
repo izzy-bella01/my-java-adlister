@@ -7,9 +7,9 @@ public class Album implements Serializable {
     private int id;
     private String artist;
     private String name;
-    private Date releaseDate;
+    private String releaseDate;
     private double sales;
-    private char gender;
+    private String genre;
 
     public int getId() {
         return id;
@@ -35,11 +35,11 @@ public class Album implements Serializable {
         this.name = name;
     }
 
-    public Date getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
 
@@ -51,11 +51,11 @@ public class Album implements Serializable {
         this.sales = sales;
     }
 
-    public char getGender() {
-        return gender;
+    public String getGenre() {
+        return genre;
     }
 
-    public void setGender(char gender) {
-        this.gender = gender;
+    public void setGenre(String genre) {
+        this.genre = genre;
     }
 }

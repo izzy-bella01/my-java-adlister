@@ -1,7 +1,7 @@
 import java.io.Serializable;
 
-public class Authors implements Serializable {
-    public Authors() {}
+public class Author implements Serializable {
+    public Author() {}
 
     private int id;
     private String firstName;
