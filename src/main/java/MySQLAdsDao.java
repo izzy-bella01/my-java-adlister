@@ -43,7 +43,10 @@ public class MySQLAdsDao implements Ads{
         try {
             Statement statement = connection.createStatement();
 
-            statement.executeUpdate("INSERT INTO ads (user_id, title, description) VALUES(ad.getUserId(), ad.getTitle(), ad.getDescription())");
+            statement.executeUpdate("INSERT INTO ads(user_id, title, description) VALUES "
+                    + "(" + ad.getUserId() + ", "
+                    + "'" + ad.getTitle() +"', "
+                    + "'" + ad.getDescription() + "')");
 
         } catch (SQLException e) {
             e.printStackTrace();
