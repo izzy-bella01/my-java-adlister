@@ -11,6 +11,11 @@
       <title>Guessing Game</title>
   </head>
   <body>
-    <h1></h1>
+    <h1>Wanna play a game?</h1>
+    <form action="/guess">
+      <label for="userGuess">Enter a number between 1 and 3</label>
+      <input type="text" id="userGuess" name="userGuess">
+      <button>Submit</button>
+    </form>
   </body>
 </html>
