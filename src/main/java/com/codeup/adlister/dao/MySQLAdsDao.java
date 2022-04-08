@@ -39,10 +39,18 @@ public class MySQLAdsDao implements Ads {
 
     public Long insert(Ad ad) {
         try {
-            Statement stmt = connection.createStatement();
-            stmt.executeUpdate(createInsertQuery(ad), Statement.RETURN_GENERATED_KEYS);
+            PreparedStatement stmt = connection.prepareStatement(createInsertQuery(ad), Statement.RETURN_GENERATED_KEYS);
+
+            stmt.setLong(1, ad.getUserId());
+            stmt.setString(2, ad.getTitle());
+            stmt.setString(3, ad.getDescription());
+
+            stmt.executeUpdate();
             ResultSet rs = stmt.getGeneratedKeys();
+
+
             rs.next();
+
             return rs.getLong(1);
         } catch (SQLException e) {
             throw new RuntimeException("Error creating a new ad.", e);
@@ -50,15 +58,7 @@ public class MySQLAdsDao implements Ads {
     }
 
     private String createInsertQuery(Ad ad) throws SQLException {
-
-        String sql = "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
-        PreparedStatement stmt = connection.prepareStatement(sql);
-
-        stmt.setLong(1, ad.getUserId());
-        stmt.setString(2, ad.getTitle());
-        stmt.setString(3, ad.getDescription());
-
-        return sql;
+        return "INSERT INTO ads(user_id, title, description) VALUES (?, ?, ?)";
     }
 
     private Ad extractAd(ResultSet rs) throws SQLException {
