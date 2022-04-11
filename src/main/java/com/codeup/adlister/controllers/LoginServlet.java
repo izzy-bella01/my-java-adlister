@@ -3,7 +3,6 @@ package com.codeup.adlister.controllers;
 import com.codeup.adlister.dao.DaoFactory;
 import com.codeup.adlister.dao.Users;
 import com.codeup.adlister.models.User;
-import sun.security.util.Password;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
